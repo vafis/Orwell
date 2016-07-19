@@ -1,0 +1,34 @@
+﻿@model Domain.Entities.Person
+
+@{
+    ViewBag.Title = "Created";
+}
+
+<h2>Created</h2>
+
+<fieldset>
+    <div>
+        <label>Name:</label>
+        <div>
+            <pre>@Model.Name</pre>
+        </div>
+    </div>
+    <div>
+        <label>SureName:</label>
+        <div>
+            <pre>@Model.Surname</pre>
+        </div>
+    </div>
+</fieldset>
+<fieldset>
+    <div>
+        <label>Skills:</label>
+        @for (int i = 0; i < Model.Skills.Count; i++)
+        {
+            <div>
+                <pre>@Model.Skills[i].Name</pre>
+            </div>
+        }
+    </div>
+
+</fieldset>
